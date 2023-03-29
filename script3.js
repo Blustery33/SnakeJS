@@ -63,6 +63,8 @@ function gameOver() {
     ctx.font = "50px Arial";
     ctx.fillText("Game Over", 70, 150);
     gameStarted = false;
+    let body = document.body;
+    body.classList.remove("noscroll");
 }
 
 function checkCollision() {
@@ -80,6 +82,7 @@ function checkCollision() {
             gameOver();
         }
     }
+
 }
 
 function updateScore() {
@@ -89,6 +92,8 @@ function updateScore() {
     ctx.fillText("High Score: " + highScore, 10, 60);
 }
 document.getElementById("start").addEventListener("click", function() {
+    var body = document.body;
+    body.classList.add("noscroll");
     startGame();
 });
 document.addEventListener("keydown", function(event) {
