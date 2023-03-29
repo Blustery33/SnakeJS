@@ -62,6 +62,7 @@ function gameOver() {
     ctx.fillStyle = "#1A1A1A";
     ctx.font = "50px Arial";
     ctx.fillText("Game Over", 70, 150);
+    ctx.fillText("Gros nul", 100, 200);
     gameStarted = false;
     let body = document.body;
     body.classList.remove("noscroll");
